@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     .swiper-container { width: 100%; padding-top: 50px; padding-bottom: 50px; }
-    .swiper-slide { background-position: center; background-size: cover; width: 300px; height: auto; }
+    .swiper-slide { background-position: center; background-size: cover; width: 280px; /* Adjusted for smaller screens */ height: auto; }
     .swiper-slide img { display: block; width: 100%; border-radius: 10px; box-shadow: 0 10px 25px rgba(0,0,0,0.5); }
     .swiper-button-next, .swiper-button-prev { color: #fbbF24; }
     .swiper-pagination-bullet-active { background: #fbbF24; }
@@ -27,7 +27,7 @@
 </head>
 <body class="bg-gray-900 text-white">
 
-  <!-- Header and Mobile Menu -->
+  <!-- Header -->
   <header class="bg-gray-800 shadow-lg sticky top-0 z-40">
     <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
         <a href="#" class="flex items-center space-x-3"><img src="https://i.postimg.cc/9M5VZprH/hhgapbg.png" alt="FootCric Logo" class="h-10"><img src="https://i.postimg.cc/T3LZ0b8d/photo-2025-08-20-12-42-31.jpg" alt="X Logo" class="h-8 rounded-full"></a>
@@ -35,6 +35,8 @@
         <div class="md:hidden"><button id="mobile-menu-btn" class="text-white focus:outline-none"><i class="fas fa-bars text-2xl"></i></button></div>
     </div>
   </header>
+
+  <!-- Mobile Menu -->
   <div id="mobile-menu" class="fixed top-0 left-0 h-full w-64 bg-gray-800 z-50 p-6 space-y-6"><a href="#features" class="block text-white hover:text-yellow-400 mobile-nav-link">Features</a><a href="#screenshots" class="block text-white hover:text-yellow-400 mobile-nav-link">Screenshots</a><a href="#download" class="block text-white hover:text-yellow-400 mobile-nav-link">Download</a><a href="#contact" class="block text-white hover:text-yellow-400 mobile-nav-link">Contact</a><button id="open-auth-btn-mobile" class="w-full mt-4 px-4 py-2 bg-yellow-400 text-black font-bold rounded-lg shadow">Login / Register</button></div>
 
   <!-- Login/Register Modal -->
@@ -45,29 +47,21 @@
   <!-- Hero Section -->
   <section id="hero" class="text-center py-16 px-4 bg-gradient-to-r from-gray-900 to-gray-700">
       <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Watch Live Sports Anywhere!</h2>
-      <p class="mb-6 text-gray-300">Your all-in-one platform for football, cricket & more. 100% Free.</p>
+      <p class="mb-6 text-gray-300 max-w-2xl mx-auto">Your all-in-one platform for football, cricket & more. 100% Free.</p>
       <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
           <a id="download-btn-hero" href="#" class="download-btn w-full sm:w-auto px-6 py-3 bg-yellow-400 text-black font-bold rounded-lg shadow hover:bg-yellow-300" download disabled>Loading App...</a>
           <a id="website-btn" href="#" class="w-full sm:w-auto px-6 py-3 bg-gray-700 border border-yellow-400 rounded-lg shadow hover:bg-gray-600">Visit Website</a>
       </div>
   </section>
 
-  <!-- Stats, Features, Screenshots, Video Sections (All Unchanged) -->
-    <section id="stats" class="bg-gray-800 py-8"><div class="max-w-4xl mx-auto px-4 flex flex-col md:flex-row justify-around text-center space-y-8 md:space-y-0"><div class="text-white"><i class="fas fa-download text-yellow-400 text-3xl mb-2"></i><h4 class="text-4xl font-bold" id="download-counter">0</h4><p class="text-gray-300 mt-2">App Downloads</p></div><div class="text-white"><i class="fas fa-users text-yellow-400 text-3xl mb-2"></i><h4 class="text-4xl font-bold" id="website-visits-counter">0</h4><p class="text-gray-300 mt-2">Active Users</p></div></div></section>
-    <section id="features" class="max-w-6xl mx-auto px-4 py-16"><h3 class="text-3xl font-bold text-center mb-10">Why Choose FootCric?</h3><div class="grid md:grid-cols-3 gap-8"><div class="bg-gray-800 p-6 rounded-lg shadow"><h4 class="text-xl font-semibold mb-2">⚡ Fast Streaming</h4><p class="text-gray-400">Enjoy smooth HD streaming with no buffering.</p></div><div class="bg-gray-800 p-6 rounded-lg shadow"><h4 class="text-xl font-semibold mb-2">📊 Live Scores</h4><p class="text-gray-400">Get real-time updates of all matches instantly.</p></div><div class="bg-gray-800 p-6 rounded-lg shadow"><h4 class="text-xl font-semibold mb-2">🌍 Global Sports</h4><p class="text-gray-400">Access football, cricket & other games worldwide.</p></div></div></section>
-    <section id="screenshots" class="py-16 bg-gray-800"><h3 class="text-3xl font-bold text-center mb-10">App Screenshots</h3><div class="swiper-container mySwiper"><div class="swiper-wrapper"><div class="swiper-slide"><img src="https://i.postimg.cc/PfbfbBW3/photo-2025-08-20-12-42-12.jpg" alt="App Screenshot 1"></div><div class="swiper-slide"><img src="https://i.postimg.cc/TPnBMXYB/photo-2025-08-20-12-42-16-2.jpg" alt="App Screenshot 2"></div><div class="swiper-slide"><img src="https://i.postimg.cc/T3LZ0b8d/photo-2025-08-20-12-42-31.jpg" alt="App Screenshot 3"></div><div class="swiper-slide"><img src="https://i.postimg.cc/kg0Lp59x/photo-2025-08-20-12-49-24-2.jpg" alt="App Screenshot 4"></div><div class="swiper-slide"><img src="https://i.postimg.cc/qvwj8MqJ/image.png" alt="App Screenshot 5"></div><div class="swiper-slide"><img src="https://i.postimg.cc/NM34gKJ4/image.png" alt="App Screenshot 6"></div><div class="swiper-slide"><img src="https://i.postimg.cc/3xqDMPbj/image.png" alt="App Screenshot 7"></div></div><div class="swiper-pagination"></div><div class="swiper-button-next"></div><div class="swiper-button-prev"></div></div></section>
-    <section id="promotion-video" class="text-center py-16"><h3 class="text-3xl font-bold mb-6">Watch Our Promo</h3><div class="max-w-4xl mx-auto px-4"><div class="relative overflow-hidden rounded-lg shadow-lg" style="padding-top: 56.25%;"><iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/VIDEO_ID_HERE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div></section>
-
-  <!-- Download Section -->
-  <section id="download" class="text-center py-16 bg-gray-900">
-    <h3 class="text-3xl font-bold mb-6">Get the FootCric App</h3>
-    <p class="text-gray-300 mb-6">Available on Android. iOS coming soon!</p>
-    <a id="download-btn-section" href="#" class="download-btn px-8 py-4 bg-yellow-400 text-black font-bold rounded-lg shadow hover:bg-yellow-300" download disabled>Loading App...</a>
-  </section>
-  
-  <!-- Contact and Footer Sections (Unchanged) -->
-    <section id="contact" class="bg-gray-800 py-16"><div class="max-w-4xl mx-auto px-4 text-center"><h3 class="text-3xl font-bold mb-6">Contact Us</h3><p class="text-gray-400 mb-2">Have questions? Reach out to us:</p><div class="mb-6 space-y-2"><p class="text-yellow-400"><a href="mailto:nafizofe8@gmail.com" class="hover:underline">Email: nafizofe8@gmail.com</a></p><p class="text-yellow-400"><a href="tel:+8809611805901" class="hover:underline">Phone: +8809611805901</a></p></div><form action="https://formspree.io/f/xldlylaa" method="POST" class="grid gap-4 max-w-md mx-auto"><input type="text" name="name" placeholder="Your Name" class="p-3 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-400" required><input type="email" name="email" placeholder="Your Email" class="p-3 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-400" required><textarea name="message" placeholder="Message" rows="4" class="p-3 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-400" required></textarea><button type="submit" class="px-6 py-3 bg-yellow-400 text-black font-bold rounded-lg shadow hover:bg-yellow-300">Send Message</button></form></div></section>
-    <footer class="bg-gray-900 text-center py-6 mt-10"><div class="flex justify-center space-x-4 mb-4"><img src="https://i.postimg.cc/9M5VZprH/hhgapbg.png" alt="FootCric Logo" class="h-8"><img src="https://i.postimg.cc/T3LZ0b8d/photo-2025-08-20-12-42-31.jpg" alt="X Logo" class="h-6 rounded-full"></div><p class="text-gray-400">© 2025 FootCric. All rights reserved.</p></footer>
+  <!-- Stats, Features, Screenshots, Video, Download, Contact, Footer Sections (All Unchanged) -->
+  <section id="stats" class="bg-gray-800 py-8"><div class="max-w-4xl mx-auto px-4 flex flex-col md:flex-row justify-around text-center space-y-8 md:space-y-0"><div class="text-white"><i class="fas fa-download text-yellow-400 text-3xl mb-2"></i><h4 class="text-4xl font-bold" id="download-counter">0</h4><p class="text-gray-300 mt-2">App Downloads</p></div><div class="text-white"><i class="fas fa-users text-yellow-400 text-3xl mb-2"></i><h4 class="text-4xl font-bold" id="website-visits-counter">0</h4><p class="text-gray-300 mt-2">Active Users</p></div></div></section>
+  <section id="features" class="max-w-6xl mx-auto px-4 py-16"><h3 class="text-3xl font-bold text-center mb-10">Why Choose FootCric?</h3><div class="grid md:grid-cols-3 gap-8"><div class="bg-gray-800 p-6 rounded-lg shadow"><h4 class="text-xl font-semibold mb-2">⚡ Fast Streaming</h4><p class="text-gray-400">Enjoy smooth HD streaming with no buffering.</p></div><div class="bg-gray-800 p-6 rounded-lg shadow"><h4 class="text-xl font-semibold mb-2">📊 Live Scores</h4><p class="text-gray-400">Get real-time updates of all matches instantly.</p></div><div class="bg-gray-800 p-6 rounded-lg shadow"><h4 class="text-xl font-semibold mb-2">🌍 Global Sports</h4><p class="text-gray-400">Access football, cricket & other games worldwide.</p></div></div></section>
+  <section id="screenshots" class="py-16 bg-gray-800"><h3 class="text-3xl font-bold text-center mb-10">App Screenshots</h3><div class="swiper-container mySwiper"><div class="swiper-wrapper"><div class="swiper-slide"><img src="https://i.postimg.cc/PfbfbBW3/photo-2025-08-20-12-42-12.jpg" alt="App Screenshot 1"></div><div class="swiper-slide"><img src="https://i.postimg.cc/TPnBMXYB/photo-2025-08-20-12-42-16-2.jpg" alt="App Screenshot 2"></div><div class="swiper-slide"><img src="https://i.postimg.cc/T3LZ0b8d/photo-2025-08-20-12-42-31.jpg" alt="App Screenshot 3"></div><div class="swiper-slide"><img src="https://i.postimg.cc/kg0Lp59x/photo-2025-08-20-12-49-24-2.jpg" alt="App Screenshot 4"></div><div class="swiper-slide"><img src="https://i.postimg.cc/qvwj8MqJ/image.png" alt="App Screenshot 5"></div><div class="swiper-slide"><img src="https://i.postimg.cc/NM34gKJ4/image.png" alt="App Screenshot 6"></div><div class="swiper-slide"><img src="https://i.postimg.cc/3xqDMPbj/image.png" alt="App Screenshot 7"></div></div><div class="swiper-pagination"></div><div class="swiper-button-next"></div><div class="swiper-button-prev"></div></div></section>
+  <section id="promotion-video" class="text-center py-16"><h3 class="text-3xl font-bold text-center mb-6">Watch Our Promo</h3><div class="max-w-4xl mx-auto px-4"><div class="relative overflow-hidden rounded-lg shadow-lg" style="padding-top: 56.25%;"><iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/VIDEO_ID_HERE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div></section>
+  <section id="download" class="text-center py-16 bg-gray-900"><h3 class="text-3xl font-bold text-center mb-6">Get the FootCric App</h3><p class="text-gray-300 mb-6">Available on Android. iOS coming soon!</p><a id="download-btn-section" href="#" class="download-btn px-8 py-4 bg-yellow-400 text-black font-bold rounded-lg shadow hover:bg-yellow-300" download disabled>Loading App...</a></section>
+  <section id="contact" class="bg-gray-800 py-16"><div class="max-w-4xl mx-auto px-4 text-center"><h3 class="text-3xl font-bold text-center mb-6">Contact Us</h3><p class="text-gray-400 mb-2">Have questions? Reach out to us:</p><div class="mb-6 space-y-2"><p class="text-yellow-400"><a href="mailto:nafizofe8@gmail.com" class="hover:underline">Email: nafizofe8@gmail.com</a></p><p class="text-yellow-400"><a href="tel:+8809611805901" class="hover:underline">Phone: +8809611805901</a></p></div><form action="https://formspree.io/f/xldlylaa" method="POST" class="grid gap-4 max-w-md mx-auto"><input type="text" name="name" placeholder="Your Name" class="p-3 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-400" required><input type="email" name="email" placeholder="Your Email" class="p-3 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-400" required><textarea name="message" placeholder="Message" rows="4" class="p-3 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-400" required></textarea><button type="submit" class="px-6 py-3 bg-yellow-400 text-black font-bold rounded-lg shadow hover:bg-yellow-300">Send Message</button></form></div></section>
+  <footer class="bg-gray-900 text-center py-6 mt-10"><div class="flex justify-center space-x-4 mb-4"><img src="https://i.postimg.cc/9M5VZprH/hhgapbg.png" alt="FootCric Logo" class="h-8"><img src="https://i.postimg.cc/T3LZ0b8d/photo-2025-08-20-12-42-31.jpg" alt="X Logo" class="h-6 rounded-full"></div><p class="text-gray-400">© 2025 FootCric. All rights reserved.</p></footer>
 
   <!-- Firebase SDKs, SwiperJS -->
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
@@ -89,43 +83,30 @@
         const linksDocRef = db.collection('config').doc('links');
         const downloadButtons = document.querySelectorAll('.download-btn');
         const websiteBtn = document.getElementById('website-btn');
-        
-        // This is the default link you provided
         const defaultApkLink = "https://github.com/thenafiziqbal/getourappsmart-footcric/releases/download/v1.0.0/footcriclivev1.apk";
         const defaultWebsiteLink = "https://thenafiziqbal.github.io/footcricliveapp/";
 
         linksDocRef.get().then(doc => {
             let apkLink = defaultApkLink;
             let websiteLink = defaultWebsiteLink;
-
-            if (doc.exists && doc.data().apkLink) {
-                apkLink = doc.data().apkLink;
-            }
-            if (doc.exists && doc.data().websiteLink) {
-                websiteLink = doc.data().websiteLink;
-            }
-
-            // Update all download buttons
+            if (doc.exists && doc.data().apkLink) { apkLink = doc.data().apkLink; }
+            if (doc.exists && doc.data().websiteLink) { websiteLink = doc.data().websiteLink; }
             downloadButtons.forEach(button => {
                 button.href = apkLink;
                 button.disabled = false;
                 button.textContent = button.id === 'download-btn-hero' ? 'Download App' : 'Download Now';
             });
-            // Update website button
             websiteBtn.href = websiteLink;
-
         }).catch(error => {
-            // If Firebase fails, use default links
             downloadButtons.forEach(button => {
                 button.href = defaultApkLink;
                 button.disabled = false;
                 button.textContent = button.id === 'download-btn-hero' ? 'Download App' : 'Download Now';
             });
             websiteBtn.href = defaultWebsiteLink;
-            console.error("Error fetching links from Firebase, using default links.", error);
+            console.error("Error fetching links, using defaults.", error);
         });
 
-        // --- MOBILE MENU LOGIC ---
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
@@ -133,17 +114,15 @@
         mobileMenuBtn.addEventListener('click', toggleMenu);
         mobileNavLinks.forEach(link => link.addEventListener('click', toggleMenu));
 
-        // --- THE REST OF THE SCRIPT REMAINS UNCHANGED ---
-        // (Auth Modal, Dummy Counters, etc.)
         const statsDocRef = db.collection('stats').doc('clicks');
         const updateRealCount = (fieldName) => { statsDocRef.update({ [fieldName]: firebase.firestore.FieldValue.increment(1) }).catch(() => statsDocRef.set({ [fieldName]: 1 }, { merge: true })); };
         const downloadCounterEl = document.getElementById('download-counter'); const websiteVisitsCounterEl = document.getElementById('website-visits-counter'); let dummyDownloads = parseInt(localStorage.getItem('dummyDownloadCount') || '157'); let dummyVisits = parseInt(localStorage.getItem('dummyVisitCount') || '482'); downloadCounterEl.innerText = dummyDownloads.toLocaleString(); websiteVisitsCounterEl.innerText = dummyVisits.toLocaleString();
-        const setupButtonListener = (buttonId, countType) => { const button = document.getElementById(buttonId); if(button){ button.addEventListener('click', () => { updateRealCount(countType); if (countType === 'downloadCount') { dummyDownloads++; localStorage.setItem('dummyDownloadCount', dummyDownloads); downloadCounterEl.innerText = dummyDownloads.toLocaleString(); } else { dummyVisits++; localStorage.setItem('dummyVisitCount', dummyVisits); websiteVisitsCounterEl.innerText = dummyVisits.toLocaleString(); } }); } };
+        const setupButtonListener = (buttonId, countType) => { const button = document.getElementById(buttonId); if(button){ button.addEventListener('click', (e) => { if(button.disabled) { e.preventDefault(); return; } updateRealCount(countType); if (countType === 'downloadCount') { dummyDownloads++; localStorage.setItem('dummyDownloadCount', dummyDownloads); downloadCounterEl.innerText = dummyDownloads.toLocaleString(); } else { dummyVisits++; localStorage.setItem('dummyVisitCount', dummyVisits); websiteVisitsCounterEl.innerText = dummyVisits.toLocaleString(); } }); } };
         setupButtonListener('download-btn-hero', 'downloadCount'); setupButtonListener('download-btn-section', 'downloadCount'); setupButtonListener('website-btn', 'visitCount');
         const modal = document.getElementById('auth-modal'); const openBtnDesktop = document.getElementById('open-auth-btn-desktop'); const openBtnMobile = document.getElementById('open-auth-btn-mobile'); const continueGuestBtn = document.getElementById('continue-guest-btn'); const loginTabBtn = document.getElementById('login-tab-btn'); const registerTabBtn = document.getElementById('register-tab-btn'); const loginForm = document.getElementById('login-form'); const registerForm = document.getElementById('register-form');
         const openModal = () => { modal.style.display = 'flex'; if (mobileMenu.classList.contains('active')) { toggleMenu(); } };
         openBtnDesktop.onclick = openModal; openBtnMobile.onclick = openModal;
-        if (!sessionStorage.getItem('guestDismissed')) { setTimeout(() => { modal.style.display = 'flex'; }, 2000); }
+        if (!sessionStorage.getItem('guestDismissed')) { setTimeout(() => { if(modal.style.display !== 'flex') openModal(); }, 2000); }
         const closeModal = () => { modal.style.display = 'none'; };
         continueGuestBtn.onclick = () => { sessionStorage.setItem('guestDismissed', 'true'); closeModal(); };
         loginTabBtn.onclick = () => { loginTabBtn.classList.add('active'); registerTabBtn.classList.remove('active'); loginForm.classList.add('active'); registerForm.classList.remove('active'); };
