@@ -31,17 +31,23 @@
   <header class="bg-gray-800 shadow-lg sticky top-0 z-40">
     <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
         <a href="#" class="flex items-center space-x-3"><img src="https://i.postimg.cc/9M5VZprH/hhgapbg.png" alt="FootCric Logo" class="h-10"><img src="https://i.postimg.cc/T3LZ0b8d/photo-2025-08-20-12-42-31.jpg" alt="X Logo" class="h-8 rounded-full"></a>
-        <nav class="hidden md:flex space-x-4 items-center"><a href="#features" class="hover:text-yellow-400">Features</a><a href="#screenshots" class="hover:text-yellow-400">Screenshots</a><a href="#download" class="hover:text-yellow-400">Download</a><a href="#contact" class="hover:text-yellow-400">Contact</a><button id="open-auth-btn-desktop" class="px-4 py-2 bg-yellow-400 text-black font-bold rounded-lg shadow hover:bg-yellow-300">Login / Register</button></nav>
+        <nav class="hidden md:flex space-x-4 items-center"><a href="#features" class="hover:text-yellow-400">Features</a><a href="#screenshots" class="hover:text-yellow-400">Screenshots</a><a href="#download" class="hover:text-yellow-400">Download</a><a href="#contact" class="hover:text-yellow-400">Contact</a><button id="open-auth-btn-desktop" class="auth-trigger px-4 py-2 bg-yellow-400 text-black font-bold rounded-lg shadow hover:bg-yellow-300">Login / Register</button></nav>
         <div class="md:hidden"><button id="mobile-menu-btn" class="text-white focus:outline-none"><i class="fas fa-bars text-2xl"></i></button></div>
     </div>
   </header>
 
   <!-- Mobile Menu -->
-  <div id="mobile-menu" class="fixed top-0 left-0 h-full w-64 bg-gray-800 z-50 p-6 space-y-6"><a href="#features" class="block text-white hover:text-yellow-400 mobile-nav-link">Features</a><a href="#screenshots" class="block text-white hover:text-yellow-400 mobile-nav-link">Screenshots</a><a href="#download" class="block text-white hover:text-yellow-400 mobile-nav-link">Download</a><a href="#contact" class="block text-white hover:text-yellow-400 mobile-nav-link">Contact</a><button id="open-auth-btn-mobile" class="w-full mt-4 px-4 py-2 bg-yellow-400 text-black font-bold rounded-lg shadow">Login / Register</button></div>
+  <div id="mobile-menu" class="fixed top-0 left-0 h-full w-64 bg-gray-800 z-50 p-6 space-y-6"><a href="#features" class="block text-white hover:text-yellow-400 mobile-nav-link">Features</a><a href="#screenshots" class="block text-white hover:text-yellow-400 mobile-nav-link">Screenshots</a><a href="#download" class="block text-white hover:text-yellow-400 mobile-nav-link">Download</a><a href="#contact" class="block text-white hover:text-yellow-400 mobile-nav-link">Contact</a><button id="open-auth-btn-mobile" class="auth-trigger w-full mt-4 px-4 py-2 bg-yellow-400 text-black font-bold rounded-lg shadow">Login / Register</button></div>
 
   <!-- Login/Register Modal -->
   <div id="auth-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
-      <div class="bg-gray-800 p-8 rounded-lg shadow-xl w-full max-w-md relative"><div class="flex border-b border-gray-700 mb-6"><button id="login-tab-btn" class="tab-btn active flex-1 py-2 font-semibold border-b-2">Login</button><button id="register-tab-btn" class="tab-btn flex-1 py-2 font-semibold border-b-2 border-transparent">Register</button></div><form id="login-form" class="tab-content active gap-4"><input type="email" id="login-email" placeholder="Your Email" class="p-3 w-full rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-400" required><div class="password-container"><input type="password" id="login-password" placeholder="Password" class="p-3 w-full rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-400" required><i class="fas fa-eye toggle-password" data-target="login-password"></i></div><button type="submit" class="w-full mt-4 px-6 py-3 bg-yellow-400 text-black font-bold rounded-lg shadow hover:bg-yellow-300">Login</button></form><form id="register-form" class="tab-content gap-4"><input type="email" id="register-email" placeholder="Your Email" class="p-3 w-full rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-400" required><div class="password-container"><input type="password" id="register-password" placeholder="Password (min. 6 characters)" class="p-3 w-full rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-400" required><i class="fas fa-eye toggle-password" data-target="register-password"></i></div><input type="tel" id="register-phone" placeholder="Phone Number" class="p-3 w-full rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-400" required><button type="submit" class="w-full mt-4 px-6 py-3 bg-yellow-400 text-black font-bold rounded-lg shadow hover:bg-yellow-300">Create Account</button></form><div class="text-center mt-6"><button id="continue-guest-btn" class="text-gray-400 hover:text-yellow-400">or Continue as Guest</button></div></div>
+      <div class="bg-gray-800 p-8 rounded-lg shadow-xl w-full max-w-md relative">
+          <p class="text-sm text-gray-400 text-center mb-4">Login or register to get the latest updates. You can also continue as a guest.</p>
+          <div class="flex border-b border-gray-700 mb-6"><button id="login-tab-btn" class="tab-btn active flex-1 py-2 font-semibold border-b-2">Login</button><button id="register-tab-btn" class="tab-btn flex-1 py-2 font-semibold border-b-2 border-transparent">Register</button></div>
+          <form id="login-form" class="tab-content active gap-4"><input type="email" id="login-email" placeholder="Your Email" class="p-3 w-full rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-400" required><div class="password-container"><input type="password" id="login-password" placeholder="Password" class="p-3 w-full rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-400" required><i class="fas fa-eye toggle-password" data-target="login-password"></i></div><button type="submit" class="w-full mt-4 px-6 py-3 bg-yellow-400 text-black font-bold rounded-lg shadow hover:bg-yellow-300">Login</button></form>
+          <form id="register-form" class="tab-content gap-4"><input type="email" id="register-email" placeholder="Your Email" class="p-3 w-full rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-400" required><div class="password-container"><input type="password" id="register-password" placeholder="Password (min. 6 characters)" class="p-3 w-full rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-400" required><i class="fas fa-eye toggle-password" data-target="register-password"></i></div><input type="tel" id="register-phone" placeholder="Phone Number" class="p-3 w-full rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-400" required><button type="submit" class="w-full mt-4 px-6 py-3 bg-yellow-400 text-black font-bold rounded-lg shadow hover:bg-yellow-300">Create Account</button></form>
+          <div class="text-center mt-6"><button id="continue-guest-btn" class="text-gray-400 hover:text-yellow-400">or Continue as Guest</button></div>
+      </div>
   </div>
 
   <!-- Hero Section -->
@@ -49,8 +55,8 @@
       <h2 id="heroTitle" class="text-3xl md:text-4xl font-extrabold mb-4">Watch Live Sports Anywhere!</h2>
       <p id="heroDescription" class="mb-6 text-gray-300 max-w-2xl mx-auto">Your all-in-one platform for football, cricket & more. 100% Free.</p>
       <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
-          <a id="download-btn-hero" href="#" class="download-btn w-full sm:w-auto px-6 py-3 bg-yellow-400 text-black font-bold rounded-lg shadow hover:bg-yellow-300" download>Download App</a>
-          <a id="website-btn" href="#" class="w-full sm:w-auto px-6 py-3 bg-gray-700 border border-yellow-400 rounded-lg shadow hover:bg-gray-600">Visit Website</a>
+          <a id="download-btn-hero" href="#" class="action-btn w-full sm:w-auto px-6 py-3 bg-yellow-400 text-black font-bold rounded-lg shadow hover:bg-yellow-300" download>Download App</a>
+          <a id="website-btn" href="#" class="action-btn w-full sm:w-auto px-6 py-3 bg-gray-700 border border-yellow-400 rounded-lg shadow hover:bg-gray-600">Visit Website</a>
       </div>
   </section>
 
@@ -82,7 +88,7 @@
   <section id="promotion-video" class="text-center py-16"><h3 class="text-3xl font-bold text-center mb-6">Watch Our Promo</h3><div class="max-w-4xl mx-auto px-4"><div class="relative overflow-hidden rounded-lg shadow-lg" style="padding-top: 56.25%;"><iframe id="promoVideo" class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/VIDEO_ID_HERE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div></section>
   
   <!-- Download -->
-  <section id="download" class="text-center py-16 bg-gray-900"><h3 id="downloadTitle" class="text-3xl font-bold text-center mb-6">Get the FootCric App</h3><p id="downloadDescription" class="text-gray-300 mb-6">Available on Android. iOS coming soon!</p><a id="download-btn-section" href="#" class="download-btn px-8 py-4 bg-yellow-400 text-black font-bold rounded-lg shadow hover:bg-yellow-300" download>Download Now</a></section>
+  <section id="download" class="text-center py-16 bg-gray-900"><h3 id="downloadTitle" class="text-3xl font-bold text-center mb-6">Get the FootCric App</h3><p id="downloadDescription" class="text-gray-300 mb-6">Available on Android. iOS coming soon!</p><a id="download-btn-section" href="#" class="action-btn px-8 py-4 bg-yellow-400 text-black font-bold rounded-lg shadow hover:bg-yellow-300" download>Download Now</a></section>
   
   <!-- Contact & Footer -->
   <section id="contact" class="bg-gray-800 py-16"><div class="max-w-4xl mx-auto px-4 text-center"><h3 class="text-3xl font-bold text-center mb-6">Contact Us</h3><p class="text-gray-400 mb-2">Have questions? Reach out to us:</p><div class="mb-6 space-y-2"><p class="text-yellow-400"><a href="mailto:nafizofe8@gmail.com" class="hover:underline">Email: nafizofe8@gmail.com</a></p><p class="text-yellow-400"><a href="tel:+8809611805901" class="hover:underline">Phone: +8809611805901</a></p></div><form action="https://formspree.io/f/xldlylaa" method="POST" class="grid gap-4 max-w-md mx-auto"><input type="text" name="name" placeholder="Your Name" class="p-3 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-400" required><input type="email" name="email" placeholder="Your Email" class="p-3 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-400" required><textarea name="message" placeholder="Message" rows="4" class="p-3 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-400" required></textarea><button type="submit" class="px-6 py-3 bg-yellow-400 text-black font-bold rounded-lg shadow hover:bg-yellow-300">Send Message</button></form></div></section>
@@ -104,12 +110,13 @@
         const defaultApkLink = "https://github.com/thenafiziqbal/getourappsmart-footcric/releases/download/v1.0.0/footcriclivev1.apk";
         const defaultWebsiteLink = "https://thenafiziqbal.github.io/footcricliveapp/";
 
+        let intendedActionUrl = null; // To store the destination URL
+
         // --- REAL-TIME DYNAMIC DATA LOADER ---
         const contentDocRef = db.collection('content').doc('pageData');
         const linksDocRef = db.collection('config').doc('links');
         const dummyStatsDocRef = db.collection('stats').doc('dummyValues');
 
-        // Listen for real-time content changes
         contentDocRef.onSnapshot(doc => {
             if (doc.exists) {
                 const data = doc.data();
@@ -125,15 +132,15 @@
             }
         });
 
-        // Listen for real-time link changes
         linksDocRef.onSnapshot(doc => {
             const apkLink = (doc.exists && doc.data().apkLink) ? doc.data().apkLink : defaultApkLink;
             const websiteLink = (doc.exists && doc.data().websiteLink) ? doc.data().websiteLink : defaultWebsiteLink;
-            document.querySelectorAll('.download-btn').forEach(button => button.href = apkLink);
+            // Set href for action buttons
+            document.getElementById('download-btn-hero').href = apkLink;
+            document.getElementById('download-btn-section').href = apkLink;
             document.getElementById('website-btn').href = websiteLink;
         });
 
-        // Initialize Dummy Counters once
         dummyStatsDocRef.get().then(doc => {
             let baseDownloads = (doc.exists && doc.data().baseDownloads) ? doc.data().baseDownloads : 157;
             let baseVisits = (doc.exists && doc.data().baseVisits) ? doc.data().baseVisits : 482;
@@ -152,24 +159,120 @@
         }
         const statsDocRef = db.collection('stats').doc('clicks');
         const updateRealCount = (fieldName) => { statsDocRef.update({ [fieldName]: firebase.firestore.FieldValue.increment(1) }).catch(() => statsDocRef.set({ [fieldName]: 1 }, { merge: true })); };
-        const setupButtonListener = (buttonId, countType) => { const button = document.getElementById(buttonId); if(button){ button.addEventListener('click', () => { updateRealCount(countType); if (countType === 'downloadCount') { dummyDownloads++; localStorage.setItem('dummyDownloadCount', dummyDownloads); downloadCounterEl.innerText = dummyDownloads.toLocaleString(); } else { dummyVisits++; localStorage.setItem('dummyVisitCount', dummyVisits); websiteVisitsCounterEl.innerText = dummyVisits.toLocaleString(); } }); } };
-        setupButtonListener('download-btn-hero', 'downloadCount');
-        setupButtonListener('download-btn-section', 'downloadCount');
-        setupButtonListener('website-btn', 'visitCount');
+        
+        // This function is for guest continuation
+        const proceedToAction = () => {
+            if (intendedActionUrl) {
+                // Determine if it's a download or visit and update counters
+                if (intendedActionUrl.includes('github.com')) { // Assuming download links are from GitHub
+                    updateRealCount('downloadCount');
+                    dummyDownloads++;
+                    localStorage.setItem('dummyDownloadCount', dummyDownloads);
+                    downloadCounterEl.innerText = dummyDownloads.toLocaleString();
+                } else {
+                    updateRealCount('visitCount');
+                    dummyVisits++;
+                    localStorage.setItem('dummyVisitCount', dummyVisits);
+                    websiteVisitsCounterEl.innerText = dummyVisits.toLocaleString();
+                }
+                window.location.href = intendedActionUrl;
+                intendedActionUrl = null;
+            }
+        };
 
-        // --- MOBILE MENU & AUTH MODAL ---
+        // --- MOBILE MENU ---
         const mobileMenuBtn = document.getElementById('mobile-menu-btn'); const mobileMenu = document.getElementById('mobile-menu'); const mobileNavLinks = document.querySelectorAll('.mobile-nav-link'); const toggleMenu = () => mobileMenu.classList.toggle('active'); mobileMenuBtn.addEventListener('click', toggleMenu); mobileNavLinks.forEach(link => link.addEventListener('click', toggleMenu));
-        const modal = document.getElementById('auth-modal'); const openBtnDesktop = document.getElementById('open-auth-btn-desktop'); const openBtnMobile = document.getElementById('open-auth-btn-mobile'); const continueGuestBtn = document.getElementById('continue-guest-btn'); const loginTabBtn = document.getElementById('login-tab-btn'); const registerTabBtn = document.getElementById('register-tab-btn'); const loginForm = document.getElementById('login-form'); const registerForm = document.getElementById('register-form');
+        
+        // --- AUTH MODAL ---
+        const modal = document.getElementById('auth-modal');
+        const continueGuestBtn = document.getElementById('continue-guest-btn');
+        const loginTabBtn = document.getElementById('login-tab-btn');
+        const registerTabBtn = document.getElementById('register-tab-btn');
+        const loginForm = document.getElementById('login-form');
+        const registerForm = document.getElementById('register-form');
+        
         const openModal = () => { modal.style.display = 'flex'; if (mobileMenu.classList.contains('active')) { toggleMenu(); } };
-        openBtnDesktop.onclick = openModal; openBtnMobile.onclick = openModal;
-        if (!sessionStorage.getItem('guestDismissed')) { setTimeout(() => { if(modal.style.display !== 'flex') openModal(); }, 2000); }
         const closeModal = () => { modal.style.display = 'none'; };
-        continueGuestBtn.onclick = () => { sessionStorage.setItem('guestDismissed', 'true'); closeModal(); };
+
+        // --- NEW: Event listeners for action buttons ---
+        document.querySelectorAll('.action-btn').forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                intendedActionUrl = e.currentTarget.href;
+                openModal();
+            });
+        });
+        
+        // Event listener for header/mobile menu "Login/Register" button
+        document.querySelectorAll('.auth-trigger').forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                intendedActionUrl = null; // No action if login button is clicked directly
+                openModal();
+            });
+        });
+
+        continueGuestBtn.onclick = () => {
+            closeModal();
+            proceedToAction(); // Proceed to the URL if one was stored
+        };
+
         loginTabBtn.onclick = () => { loginTabBtn.classList.add('active'); registerTabBtn.classList.remove('active'); loginForm.classList.add('active'); registerForm.classList.remove('active'); };
         registerTabBtn.onclick = () => { registerTabBtn.classList.add('active'); loginTabBtn.classList.remove('active'); registerForm.classList.add('active'); loginForm.classList.remove('active'); };
-        document.querySelectorAll('.toggle-password').forEach(toggle => { toggle.addEventListener('click', () => { const targetInput = document.getElementById(toggle.dataset.target); if (targetInput.type === 'password') { targetInput.type = 'text'; toggle.classList.remove('fa-eye'); toggle.classList.add('fa-eye-slash'); } else { targetInput.type = 'password'; toggle.classList.remove('fa-eye-slash'); toggle.classList.add('fa-eye'); } }); });
-        loginForm.addEventListener('submit', (e) => { e.preventDefault(); const email = document.getElementById('login-email').value; const password = document.getElementById('login-password').value; auth.signInWithEmailAndPassword(email, password).then(userCredential => { alert('Login successful!'); closeModal(); }).catch(error => alert('Error: ' + error.message)); });
-        registerForm.addEventListener('submit', (e) => { e.preventDefault(); const email = document.getElementById('register-email').value; const password = document.getElementById('register-password').value; const phone = document.getElementById('register-phone').value; auth.createUserWithEmailAndPassword(email, password).then(userCredential => { db.collection('users').doc(userCredential.user.uid).set({ email: email, phoneNumber: phone, createdAt: firebase.firestore.FieldValue.serverTimestamp() }).then(() => { alert('Account created successfully!'); closeModal(); }); }).catch(error => alert('Error: ' + error.message)); });
+        
+        document.querySelectorAll('.toggle-password').forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const targetInput = document.getElementById(toggle.dataset.target);
+                if (targetInput.type === 'password') {
+                    targetInput.type = 'text';
+                    toggle.classList.remove('fa-eye');
+                    toggle.classList.add('fa-eye-slash');
+                } else {
+                    targetInput.type = 'password';
+                    toggle.classList.remove('fa-eye-slash');
+                    toggle.classList.add('fa-eye');
+                }
+            });
+        });
+
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
+            auth.signInWithEmailAndPassword(email, password)
+                .then(userCredential => {
+                    // NEW: Track login for admin
+                    db.collection('user_logins').add({
+                        userId: userCredential.user.uid,
+                        email: email,
+                        timestamp: firebase.firestore.FieldValue.serverTimestamp()
+                    });
+                    alert('Login successful!');
+                    closeModal();
+                    proceedToAction(); // Proceed after successful login
+                })
+                .catch(error => alert('Error: ' + error.message));
+        });
+
+        registerForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = document.getElementById('register-email').value;
+            const password = document.getElementById('register-password').value;
+            const phone = document.getElementById('register-phone').value;
+            auth.createUserWithEmailAndPassword(email, password)
+                .then(userCredential => {
+                    db.collection('users').doc(userCredential.user.uid).set({
+                        email: email,
+                        phoneNumber: phone,
+                        createdAt: firebase.firestore.FieldValue.serverTimestamp()
+                    }).then(() => {
+                        alert('Account created successfully!');
+                        closeModal();
+                        proceedToAction(); // Proceed after successful registration
+                    });
+                })
+                .catch(error => alert('Error: ' + error.message));
+        });
     });
   </script>
 </body>
